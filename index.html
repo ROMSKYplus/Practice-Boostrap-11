@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NiceShop - Your Online Shopping Destination</title>
+    <meta name="description" content="NiceShop offers">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+
+        <!-- Top Bar -->
+        <section class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>Need help? Call us:</span>
+                        <a href="tel:+12345678900">+1 (234) 567-8900</a>
+                    </div>
+
+                    <div class="promo-slider mx-auto">
+                        <div class="swiper" aria-live="polite">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+                                    <span>Free shipping on orders over $50</span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <span>Best-rated products available now!</span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <i class="fas fa-bolt" aria-hidden="true"></i>
+                                    <span>Lightning fast delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lang-currency">
+                        <div class="dropdown d-inline-block me-3">
+                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                <span>EN</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">EN - English</a></li>
+                                <li><a class="dropdown-item" href="#">FR - Français</a></li>
+                                <li><a class="dropdown-item" href="#">ES - Español</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown d-inline-block">
+                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+                                <span>USD</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">USD - US Dollar</a></li>
+                                <li><a class="dropdown-item" href="#">EUR - Euro</a></li>
+                                <li><a class="dropdown-item" href="#">GBP - Pound Sterling</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Header -->
+        <section class="header-main" aria-label="Main header">
+            <div class="container">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-3 col-md-12 text-center text-lg-start">
+                        <h1 class="brand-logo">NiceShop</h1>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="search-container">
+                            <form class="d-flex" role="search" aria-label="Product search">
+                                <input type="search" class="form-control search-input"
+                                    placeholder="Search for products...">
+                                <button type="submit" class="btn search-btn" aria-label="Submit search">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12">
+                        <nav class="header-actions" aria-label="User account and cart">
+                            <div class="action-item">
+                                <a href="#" class="action-link" aria-label="User account">
+                                    <i class="far fa-user" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="action-item">
+                                <a href="#" class="action-link" aria-label="Wishlist with 0 items">
+                                    <i class="far fa-heart" aria-hidden="true"></i>
+                                    <span class="badge-count wishlist" aria-hidden="true">0</span>
+                                </a>
+                            </div>
+                            <div class="action-item">
+                                <a href="#" class="action-link" aria-label="Shopping cart with 3 items">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                    <span class="badge-count" aria-hidden="true">3</span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Navigation -->
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Product Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Checkout</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-label="More options">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Special Offers</a></li>
+                                <li><a class="dropdown-item" href="#">Help Center</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link disabled">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="collapse navbar-collapse " id="mainNavigation">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Product Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Checkout</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" aria-label="More options">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Special Offers</a></li>
+                            <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Help Center</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-auto">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+
+    <main>
+        <section class="hero-banner  bg-dark">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6 col-md-12 ">
+                        <div class="content-left " data-aos="fade-right">
+                            <h1 class="hero-title  mb-4">
+                                Discover Amazing Products
+                            </h1>
+                            <p class=" hero-description  mb-5">
+                                Explore our curated collection of premium items designed to enhance your lifestyle. From
+                                fashion to tech, find everything you need with exclusive deals and fast shipping.
+                                fashion to tech, find everything you need with exclusive deals and fast shipping.
+                            </p>
+
+                            <!-- Action Buttons -->
+                            <div class="hero-buttons mb-4">
+                                <a href="#" class="btn btn-dark btn-lg me-3 btn-shop-now">Shop Now</a>
+                                <a href="#" class="btn btn-out-line-brows btn-lg">Browse Categories</a>
+                            </div>
+
+                            <!-- Service Features -->
+                            <div class="hero-service d-flex gap-4 flex-wrap">
+                                <div class="hero-service-content d-flex align-items-center text-white-50">
+                                    <img src="assets/img/truck.svg" alt="">
+                                    <p class="mb-0 lead px-2">Free Shipping</p>
+                                </div>
+                                <div class="hero-service-content d-flex align-items-center text-white-50">
+                                    <!-- <i class="bi bi-truck"></i> -->
+                                    <img src="assets/img/trophy.svg" alt="">
+                                    <p class="mb-0 lead px-2">Quality Guarantee</p>
+                                </div>
+                                <div class="hero-service-content d-flex align-items-center text-white-50">
+                                    <!-- <i class="bi bi-headset me-2"></i> -->
+                                    <img src="assets/img/telephone-inbound.svg" alt="">
+                                    <p class="mb-0 lead px-2">24/7 Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="content-right position-relative">
+                            <!-- Shopping Cart Icon -->
+                            <div class="floating-cart-icon">
+                                <div class="cart-icon-wrapper">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="cart-badge">3</span>
+                                </div>
+                            </div>
+
+                            <!-- Search Icon -->
+                            <div class="floating-search-icon" data-aos="fade-left">
+                                <div class="search-icon-wrapper">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+
+                            <!-- Wishlist Icon -->
+                            <div class="floating-wishlist-icon" data-aos="fade-left">
+                                <div class="wishlist-icon-wrapper">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+
+                            <!-- Main Product Display -->
+                            <div class="hero-product-card" data-aos="fade-left">
+                                <div class="product-badge">Best Seller</div>
+                                <div class="product-image-container">
+                                    <img src="assets/img/product-2.webp" alt="Premium Wooden Chair"
+                                        class="main-product-image">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title-main">Premium Wireless Headphones</h3>
+                                    <div class="product-price-main">
+                                        <span class="price-current-main">$299</span>
+                                        <span class="price-original-main">$399</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Product Cards -->
+                            <div class="floating-product floating-product-1" data-aos="zoom-in">
+                                <div class="mini-product-card">
+                                    <img src="assets/img/product-3.webp" alt="Sunglasses" class="mini-product-image" />
+                                    <div class="mini-product-price">$89</div>
+                                </div>
+                            </div>
+
+                            <div class="floating-product floating-product-2" data-aos="zoom-in">
+                                <div class="mini-product-card">
+                                    <img src="assets/img/product-5.webp" alt="High Heels" class="mini-product-image">
+                                    <div class="mini-product-price">$149</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-showcase py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-6 col-12">
+                        <div class="large-showcase-card d-flex rounded overflow-hidden h-100" data-aos="zoom-in-right">
+                            <div class="card-content p-5 d-flex flex-column justify-content-between">
+                                <h6 class="trending-tag">TRENDING NOW</h6>
+                                <h2 class="collection-title my-3">New Summer Collection</h2>
+                                <p class="collection-description  lead mb-4">Discover our latest arrivals designed for
+                                    the
+                                    , comfortable, and sustainable fashion for every occasion.
+                                </p>
+                                <a href="#" class="explore-btn d-flex align-items-center">Explore Collection <span
+                                        class="ms-2 arrow">→</span></a>
+                            </div>
+                            <div class="card-image-wrapper">
+                                <img src="assets/img/product-f-4.webp" alt="A woman in a new summer collection outfit."
+                                    class="img-fluid h-100 object-fit-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="row g-4 h-100">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="small-showcase-card men-wear rounded overflow-hidden" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-6 card-content p-3 d-flex flex-column justify-content-center">
+                                            <div>
+                                                <h5 class="category-title">Men's Wear</h5>
+                                                <p class="product-count mb-2">242 products</p>
+                                            </div>
+                                            <a href="#" class="shop-btn">Shop Now <span class="arrow">→</span></a>
+                                        </div>
+                                        <div class="col-6 card-image-wrapper">
+                                            <img src="assets/img/product-m-5.webp" alt="A man in a beige jacket."
+                                                class="img-fluid h-100 object-fit-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="small-showcase-card kids-fashion rounded overflow-hidden " data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-6 card-content p-3 d-flex flex-column justify-content-center">
+                                            <div>
+                                                <h5 class="category-title">Men's Wear</h5>
+                                                <p class="product-count mb-2">242 products</p>
+                                            </div>
+                                            <a href="#" class="shop-btn">Shop Now <span class="arrow">→</span></a>
+                                        </div>
+                                        <div class="col-6 card-image-wrapper">
+                                            <img src="assets/img/product-8.webp" alt="A man in a beige jacket."
+                                                class="img-fluid h-100 object-fit-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="small-showcase-card beauty-products rounded overflow-hidden" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-6 card-content p-3 d-flex flex-column justify-content-center">
+                                            <div>
+                                                <h5 class="category-title">Men's Wear</h5>
+                                                <p class="product-count mb-2">242 products</p>
+                                            </div>
+                                            <a href="#" class="shop-btn">Shop Now <span class="arrow">→</span></a>
+                                        </div>
+                                        <div class="col-6 card-image-wrapper">
+                                            <img src="assets/img/product-3.webp" alt="A man in a beige jacket."
+                                                class="img-fluid h-100 object-fit-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="small-showcase-card accessories rounded overflow-hidden" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-6 card-content p-3 d-flex flex-column justify-content-center">
+                                            <div>
+                                                <h5 class="category-title">Men's Wear</h5>
+                                                <p class="product-count mb-2">242 products</p>
+                                            </div>
+                                            <a href="#" class="shop-btn">Shop Now <span class="arrow">→</span></a>
+                                        </div>
+                                        <div class="col-6 card-image-wrapper">
+                                            <img src="assets/img/product-12.webp" alt="A man in a beige jacket."
+                                                class="img-fluid h-100 object-fit-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="best-sellers py-5">
+            <div class="container">
+                <h2 class="text-center mb-3">Best Sellers</h2>
+                <p class="text-center text-muted mb-5">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+                    consectetur velit</p>
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up">
+                        <div class="card product-card h-100">
+                            <div class="position-relative product-image-wrapper" >
+                                <img src="assets/img/product-1.webp" alt="Brown Leather Tote"
+                                    class="card-img-top object-fit-contain px-0 w-100" style="height: 250px;">
+                                <span class="badge bg-dark position-absolute top-0 start-0 m-2">LIMITED</span>
+                                <div class="add-to-cart-overlay">
+                                    <button class="btn add-to-card-btn btn-sm">SELECT OPTIONS</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <a href="#" class="action-btn heart-btn"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#" class="action-btn compare-btn"><i
+                                            class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="#" class="action-btn zoom-btn"><i
+                                            class="fa-solid fa-magnifying-glass"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle text-muted mb-1">PREMIUM COLLECTION</h6>
+                                <h5 class="card-title">Mauris blandit aliquet elit</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-regular fa-star text-warning"></i>
+                                    <span class="text-muted">(24)</span>
+                                </div>
+                                <p class="card-text">
+                                    <span class="fw-bold">$189.00</span>
+                                </p>
+                                <div class="color-options">
+                                    <span class="color-dot bg-primary rounded-circle me-1"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                    <span class="color-dot bg-info rounded-circle me-1"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                    <span class="color-dot bg-success rounded-circle"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up">
+                        <div class="card product-card h-100">
+                            <div class="position-relative product-image-wrapper">
+                                <img src="assets/img/product-4.webp" alt="Grey Hoodie"
+                                    class="card-img-top object-fit-contain px-0 w-100" style="height: 250px;">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">25% OFF</span>
+                                <div class="add-to-cart-overlay">
+                                    <button class="btn add-to-card-btn btn-sm">SELECT OPTIONS</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <a href="#" class="action-btn heart-btn"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#" class="action-btn compare-btn"><i
+                                            class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="#" class="action-btn zoom-btn"><i
+                                            class="fa-solid fa-magnifying-glass"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle text-muted mb-1">BEST SELLERS</h6>
+                                <h5 class="card-title">Sed do eiusmod tempor incididunt</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                                    <i class="fa-regular fa-star text-warning"></i>
+                                    <span class="text-muted">(38)</span>
+                                </div>
+                                <p class="card-text">
+                                    <span class="text-muted"><s class="fw-normal">$240.00</s></span>
+                                    <span class="fw-bold ms-2">$180.00</span>
+                                </p>
+                                <div class="color-options">
+                                    <span class="color-dot bg-dark rounded-circle me-1"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                    <span class="color-dot bg-warning rounded-circle me-1"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                    <span class="color-dot bg-secondary rounded-circle"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up">
+                        <div class="card product-card h-100">
+                            <div class="position-relative product-image-wrapper">
+                                <img src="assets/img/product-7.webp" alt="Brown Leather Tote"
+                                    class="card-img-top object-fit-contain px-0 w-100" style="height: 250px;">
+
+                                <div class="add-to-cart-overlay">
+                                    <button class="btn add-to-card-btn btn-sm">SELECT OPTIONS</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <a href="#" class="action-btn heart-btn"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#" class="action-btn compare-btn"><i
+                                            class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="#" class="action-btn zoom-btn"><i
+                                            class="fa-solid fa-magnifying-glass"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle text-muted mb-1">PREMIUM COLLECTION</h6>
+                                <h5 class="card-title">Mauris blandit aliquet elit</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-regular fa-star text-warning"></i>
+                                    <span class="text-muted">(24)</span>
+                                </div>
+                                <p class="card-text">
+                                    <span class="fw-bold">$189.00</span>
+                                </p>
+                                <div class="color-options">
+                                    <span class="color-dot bg-primary rounded-circle me-1"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                    <span class="color-dot bg-info rounded-circle me-1"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                    <span class="color-dot bg-success rounded-circle"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up">
+                        <div class="card product-card h-100">
+                            <div class="position-relative product-image-wrapper">
+                                <img src="assets/img/product-10.webp" alt="Brown Leather Tote"
+                                    class="card-img-top object-fit-contain px-0 w-100" style="height: 250px;">
+                                <span class="badge bg-dark position-absolute top-0 start-0 m-2">TREDING</span>
+                                <div class="add-to-cart-overlay">
+                                    <button class="btn add-to-card-btn btn-sm">SELECT OPTIONS</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <a href="#" class="action-btn heart-btn"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#" class="action-btn compare-btn"><i
+                                            class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                    <a href="#" class="action-btn zoom-btn"><i
+                                            class="fa-solid fa-magnifying-glass"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle text-muted mb-1">PREMIUM COLLECTION</h6>
+                                <h5 class="card-title">Mauris blandit aliquet elit</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-regular fa-star text-warning"></i>
+                                    <span class="text-muted">(24)</span>
+                                </div>
+                                <p class="card-text">
+                                    <span class="fw-bold">$189.00</span>
+                                </p>
+                                <div class="color-options">
+                                    <span class="color-dot bg-primary rounded-circle me-1"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                    <span class="color-dot bg-info rounded-circle me-1"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                    <span class="color-dot bg-success rounded-circle"
+                                        style="width: 15px; height: 15px; display: inline-block;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="footer-left">
+                <p class="mb-0">&copy; Copyright <span class="fw-bold">Phearom.</span> All Rights Reserved.</p>
+            </div>
+            <div class="footer-right">
+                <ul class="list-unstyled d-flex mb-0">
+                    <li class="me-3"><a href="#" class=" text-decoration-none">Terms</a></li>
+                    <li class="me-3"><a href="#" class="text-decoration-none">Privacy</a></li>
+                    <li><a href="#" class=" text-decoration-none">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper', {
+            direction: 'vertical',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 800,
+            effect: 'slide',
+            allowTouchMove: false, // Disable manual swiping for automatic slideshow
+        });
+
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
