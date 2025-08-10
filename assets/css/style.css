@@ -33,7 +33,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 99999;
-
 }
 .navbar {
   background-color: var(--primary-color);
@@ -68,7 +67,6 @@ header {
   align-items: center;
   gap: 0.5rem;
   color: var(--text-color);
-
 }
 
 .contact-info a {
@@ -274,7 +272,7 @@ li.dropdown:hover ul.dropdown-menu {
 }
 
 .hero-banner {
-  background-image: url(/assets/img/bg.jpg);
+  background-image: url(../img/bg.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -541,19 +539,17 @@ li.dropdown:hover ul.dropdown-menu {
 }
 
 .large-showcase-card .card-image-wrapper {
-  
   display: flex;
   transition: var(--transition);
 }
 .large-showcase-card:hover .card-image-wrapper {
   transform: scale(1.03);
-  
 }
 
-.arrow{
+.arrow {
   transition: var(--transition);
 }
-.large-showcase-card:hover .arrow{
+.large-showcase-card:hover .arrow {
   transform: translateX(10px);
 }
 /* Small showcase cards on the right */
@@ -563,8 +559,6 @@ li.dropdown:hover ul.dropdown-menu {
   height: 100%;
   /* transition: var(--transition); */
 }
-
-
 
 .small-showcase-card .category-title {
   font-weight: bold;
@@ -593,19 +587,19 @@ li.dropdown:hover ul.dropdown-menu {
 }
 /* Specific background colors for each card */
 .men-wear {
-  background-color: #E6F4FF;
+  background-color: #e6f4ff;
 }
 
 .kids-fashion {
-  background-color: #FFF4E6;
+  background-color: #fff4e6;
 }
 
 .beauty-products {
-  background-color: #FFE6EB;
+  background-color: #ffe6eb;
 }
 
 .accessories {
-  background-color:#E6FFE8;
+  background-color: #e6ffe8;
 }
 
 /* best selling */
@@ -854,16 +848,14 @@ li.dropdown:hover ul.dropdown-menu {
   transform: translateY(-10px);
 }
 
-.footer-left p{
-  color:#ffd8d8;
+.footer-left p {
+  color: #ffd8d8;
 }
 
 .footer-right ul li a {
   color: #ccc;
 }
 
-
-.footer-right ul li:hover a{
+.footer-right ul li:hover a {
   color: #fff;
 }
-
