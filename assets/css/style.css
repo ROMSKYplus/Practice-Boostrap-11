@@ -272,7 +272,7 @@ li.dropdown:hover ul.dropdown-menu {
 }
 
 .hero-banner {
-  background-image: url(../img/bg.jpg);
+  background-image: url(/assets/img/background-banner.jpg);
   background-position: center;
   background-size: cover;
 }
