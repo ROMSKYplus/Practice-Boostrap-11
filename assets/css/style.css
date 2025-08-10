@@ -1,24 +1,63 @@
-/* CSS Custom Properties for consistency */
+/* ==========================================================================
+   TABLE OF CONTENTS
+   ==========================================================================
+   1. CSS Custom Properties (Variables)
+   2. Reset & Base Styles
+   3. Header Components
+      - Header Top
+      - Main Header
+      - Navigation
+   4. Hero Section
+      - Banner
+      - Product Cards
+      - Floating Elements
+   5. Product Showcase Section
+   6. Best Sellers Section
+   7. Footer
+   8. Utilities
+   9. Responsive Design
+   ========================================================================== */
+
+/* ==========================================================================
+   1. CSS CUSTOM PROPERTIES (VARIABLES)
+   ========================================================================== */
 :root {
+  /* Colors */
   --primary-color: #1f1f1f;
   --secondary-color: #f8f9fa;
   --accent-color: #ffc107;
+  --success-color: #28a745;
+  --text-color: #333;
+  --text-light: #777;
+  --text-dark: #222;
+  --text-hover: #bc2323;
+  --text-navbar: #ddd;
+  --text-navbar-hover: #fff;
+  --border-color: #dee2e6;
+  --hover-color: #495057;
+
+  /* Background Colors */
   --bg-pink: #fef4f4;
   --bg-blue: #f1f7fe;
   --bg-light-pink: #fdf5f5;
   --bg-green: #f3fcf4;
-  --text-color: #333;
-  --border-color: #dee2e6;
-  --hover-color: #495057;
+
+  /* Typography */
   --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Effects */
   --transition: all 0.3s ease;
-  --text-hover: #bc2323;
-  --text-navbar: #ddd;
-  --text-navbar-hover: #fff;
+  --box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --box-shadow-md: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --box-shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
-/* Reset and Base Styles */
-* {
+/* ==========================================================================
+   2. RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -29,21 +68,16 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* ==========================================================================
+   3. HEADER COMPONENTS
+   ========================================================================== */
+
+/* Header Container */
 header {
   position: sticky;
   top: 0;
   z-index: 99999;
-}
-.navbar {
-  background-color: var(--primary-color);
-}
-
-.text-decoration-none {
-  text-decoration: none !important;
-}
-
-.transition-all {
-  transition: var(--transition);
 }
 
 /* Header Top Section */
@@ -62,6 +96,7 @@ header {
   gap: 1rem;
 }
 
+/* Contact Information */
 .contact-info {
   display: flex;
   align-items: center;
@@ -105,7 +140,7 @@ header {
   color: var(--accent-color);
 }
 
-/* Language and Currency */
+/* Language and Currency Controls */
 .lang-currency {
   display: flex;
   align-items: center;
@@ -130,7 +165,7 @@ header {
 .header-main {
   background: white;
   padding: 1.25rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--box-shadow-sm);
 }
 
 .brand-logo {
@@ -163,17 +198,13 @@ header {
 
 .search-btn {
   background: var(--primary-color);
-  /* border: 2px solid var(--primary-color); */
   color: white;
   border-radius: 5px;
   padding-inline: 30px;
-  /* padding: 0.70rem 1rem; */
   transition: var(--transition);
   position: absolute;
   right: 5px;
-
   transform: translateY(12%);
-  /* top: 5px; */
 }
 
 .search-btn:hover {
@@ -181,7 +212,7 @@ header {
   border-color: var(--hover-color);
 }
 
-/* Action Icons */
+/* Header Action Icons */
 .header-actions {
   display: flex;
   justify-content: flex-end;
@@ -228,11 +259,15 @@ header {
   background: #dc3545;
 }
 
-/* Navigation */
+/* Main Navigation */
+.navbar {
+  background-color: var(--primary-color);
+}
+
 .main-navigation {
   background: var(--primary-color) !important;
   border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-md);
 }
 
 .navbar-nav {
@@ -242,7 +277,6 @@ header {
 .nav-link {
   color: var(--text-navbar) !important;
   font-weight: 500;
-  /* padding: 1rem 1.25rem !important; */
   transition: var(--transition);
   position: relative;
 }
@@ -258,26 +292,63 @@ header {
 }
 
 .dropdown-item:hover {
-  /* background: var(--secondary-color); */
   color: var(--primary-color);
 }
+
 li.dropdown:hover ul.dropdown-menu {
   display: block;
 }
 
-/* Navbar Toggler */
 .navbar-toggler {
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.5rem;
 }
 
+/* ==========================================================================
+   4. HERO SECTION
+   ========================================================================== */
+
+/* Hero Banner */
 .hero-banner {
   background-image: url(/assets/img/background-banner.jpg);
   background-position: center;
   background-size: cover;
 }
 
-/* Product Display */
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.lead {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Hero Buttons */
+.btn-shop-now {
+  transition: var(--transition);
+}
+
+.btn-shop-now:hover {
+  transform: translateY(-10px);
+}
+
+.btn-out-line-brows {
+  border: 1px solid var(--text-color);
+  transition: var(--transition);
+}
+
+.btn-out-line-brows:hover {
+  border: none;
+  color: #fff;
+  background-color: var(--text-color);
+  transform: translateY(-10px);
+}
+
+/* Product Display Area */
 .content-right {
   position: relative;
   display: flex;
@@ -293,7 +364,7 @@ li.dropdown:hover ul.dropdown-menu {
   padding: 2.5rem 2rem;
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-lg);
   transition: var(--transition);
   border: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 5;
@@ -356,29 +427,30 @@ li.dropdown:hover ul.dropdown-menu {
   text-decoration: line-through;
 }
 
-/* Floating Icons */
-.floating-cart-icon {
+/* Floating Elements */
+.floating-cart-icon,
+.floating-search-icon,
+.floating-wishlist-icon {
   position: absolute;
-  top: 70px;
-  left: -20px;
   z-index: 3;
   animation: float 3s ease-in-out infinite;
 }
 
+.floating-cart-icon {
+  top: 70px;
+  left: -20px;
+}
+
 .floating-search-icon {
-  position: absolute;
   bottom: 150px;
   left: -30px;
-  z-index: 3;
-  animation: float 3s ease-in-out infinite 1s;
+  animation-delay: 1s;
 }
 
 .floating-wishlist-icon {
-  position: absolute;
   top: 100px;
   right: -10px;
-  z-index: 3;
-  animation: float 3s ease-in-out infinite 2s;
+  animation-delay: 2s;
 }
 
 .cart-icon-wrapper,
@@ -410,11 +482,6 @@ li.dropdown:hover ul.dropdown-menu {
   color: var(--primary-color);
 }
 
-.badge {
-  padding: 8px 20px;
-  border-radius: 0;
-}
-
 .cart-badge {
   position: absolute;
   top: -8px;
@@ -442,7 +509,6 @@ li.dropdown:hover ul.dropdown-menu {
   right: 0px;
   z-index: 99;
   transform: translateX(-60%);
-  /* animation: float 4s ease-in-out infinite 0.5s; */
 }
 
 .floating-product-2 {
@@ -450,11 +516,9 @@ li.dropdown:hover ul.dropdown-menu {
   right: 0px;
   z-index: 99;
   transform: translateX(-50%);
-  /* animation: float 4s ease-in-out infinite 1.5s; */
 }
 
 .mini-product-card {
-  /* position: absolute; */
   background: white;
   border-radius: 15px;
   padding: 15px;
@@ -483,30 +547,22 @@ li.dropdown:hover ul.dropdown-menu {
   margin-top: 0;
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-/* General section styling */
+/* ==========================================================================
+   5. PRODUCT SHOWCASE SECTION
+   ========================================================================== */
 .product-showcase {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  background-color: var(--secondary-color);
 }
 
-/* Large showcase card on the left */
+/* Large Showcase Card */
 .large-showcase-card {
   background-color: var(--bg-pink);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .large-showcase-card .card-content {
-  flex: 1; /* Allow content to grow */
+  flex: 1;
   color: var(--text-dark);
 }
 
@@ -528,10 +584,9 @@ li.dropdown:hover ul.dropdown-menu {
 }
 
 .large-showcase-card .explore-btn {
-  color: rgb(255, 255, 255);
+  color: white;
   font-weight: bold;
   text-decoration: none;
-  /* padding-left: 15px; */
   padding: 8px 15px;
   background-color: #000;
   border-radius: 50px;
@@ -542,6 +597,7 @@ li.dropdown:hover ul.dropdown-menu {
   display: flex;
   transition: var(--transition);
 }
+
 .large-showcase-card:hover .card-image-wrapper {
   transform: scale(1.03);
 }
@@ -549,15 +605,16 @@ li.dropdown:hover ul.dropdown-menu {
 .arrow {
   transition: var(--transition);
 }
+
 .large-showcase-card:hover .arrow {
   transform: translateX(10px);
 }
-/* Small showcase cards on the right */
+
+/* Small Showcase Cards */
 .small-showcase-card {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   display: flex;
   height: 100%;
-  /* transition: var(--transition); */
 }
 
 .small-showcase-card .category-title {
@@ -585,24 +642,16 @@ li.dropdown:hover ul.dropdown-menu {
 .small-showcase-card:hover .card-image-wrapper {
   transform: scale(1.03);
 }
-/* Specific background colors for each card */
-.men-wear {
-  background-color: #e6f4ff;
-}
 
-.kids-fashion {
-  background-color: #fff4e6;
-}
+/* Category Background Colors */
+.men-wear { background-color: #e6f4ff; }
+.kids-fashion { background-color: #fff4e6; }
+.beauty-products { background-color: #ffe6eb; }
+.accessories { background-color: #e6ffe8; }
 
-.beauty-products {
-  background-color: #ffe6eb;
-}
-
-.accessories {
-  background-color: #e6ffe8;
-}
-
-/* best selling */
+/* ==========================================================================
+   6. BEST SELLERS SECTION
+   ========================================================================== */
 .best-sellers {
   background-color: #fff;
 }
@@ -619,7 +668,6 @@ li.dropdown:hover ul.dropdown-menu {
 }
 
 .product-card .card-img-top {
-  /* padding: 20px; */
   background-color: #f9f9f9;
   border-bottom: 1px solid #eee;
   border-top-left-radius: 8px;
@@ -633,13 +681,13 @@ li.dropdown:hover ul.dropdown-menu {
 .product-card .card-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
 .product-card .card-subtitle {
   font-size: 0.875rem;
-  color: #777;
+  color: var(--text-light);
   margin-bottom: 0.25rem;
 }
 
@@ -653,7 +701,7 @@ li.dropdown:hover ul.dropdown-menu {
 
 .product-card .card-text .fw-bold {
   font-size: 1.1rem;
-  color: #222;
+  color: var(--text-dark);
 }
 
 .color-options .color-dot {
@@ -661,7 +709,7 @@ li.dropdown:hover ul.dropdown-menu {
   border: 1px solid #ccc;
 }
 
-/* Hover effect CSS */
+/* Product Hover Effects */
 .product-image-wrapper {
   position: relative;
   overflow: hidden;
@@ -694,7 +742,7 @@ li.dropdown:hover ul.dropdown-menu {
 }
 
 .add-to-cart-overlay .add-to-card-btn:hover {
-  background-color: #1f1f1f;
+  background-color: var(--primary-color);
 }
 
 .action-buttons {
@@ -717,12 +765,12 @@ li.dropdown:hover ul.dropdown-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px; /* Adjust size as needed */
-  height: 35px; /* Adjust size as needed */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-  font-size: 18px; /* Adjust icon size */
-  color: #333;
+  font-size: 18px;
+  color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
@@ -733,8 +781,54 @@ li.dropdown:hover ul.dropdown-menu {
   color: #fff;
 }
 
-/* Responsive Design */
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+.footer-left p {
+  color: #ffd8d8;
+}
+
+.footer-right ul li a {
+  color: #ccc;
+}
+
+.footer-right ul li:hover a {
+  color: #fff;
+}
+
+/* ==========================================================================
+   8. UTILITIES
+   ========================================================================== */
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.transition-all {
+  transition: var(--transition);
+}
+
+.badge {
+  padding: 8px 20px;
+  border-radius: 0;
+}
+
+/* ==========================================================================
+   9. ANIMATIONS
+   ========================================================================== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ==========================================================================
+   10. RESPONSIVE DESIGN
+   ========================================================================== */
 @media (max-width: 768px) {
+  /* Header Adjustments */
   .header-top-content {
     justify-content: center;
     text-align: center;
@@ -759,16 +853,11 @@ li.dropdown:hover ul.dropdown-menu {
     gap: 1rem;
   }
 
-  .hero-service {
-    gap: 1rem;
+  /* Hero Section Adjustments */
+  .hero-title {
+    font-size: 2.5rem;
   }
 
-  .hero-service-content {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-
-  /* Mobile Product Layout */
   .content-right {
     min-height: 400px;
     padding: 2rem 1rem;
@@ -777,26 +866,6 @@ li.dropdown:hover ul.dropdown-menu {
   .hero-product-card {
     max-width: 300px;
     padding: 1.5rem;
-  }
-
-  .floating-cart-icon,
-  .floating-search-icon,
-  .floating-wishlist-icon {
-    display: none;
-  }
-
-  .mini-product-card {
-    width: 100px;
-    padding: 12px;
-  }
-
-  .mini-product-image {
-    width: 60px;
-    height: 60px;
-  }
-
-  .mini-product-price {
-    font-size: 14px;
   }
 
   .main-product-image {
@@ -814,48 +883,26 @@ li.dropdown:hover ul.dropdown-menu {
   .price-original-main {
     font-size: 1rem;
   }
-}
 
-.hero-title {
-  font-size: 4rem;
-  font-weight: 700;
-  color: #333;
-}
-.lead {
-  color: #333;
-  font-size: 16px;
-  font-weight: 300;
-}
+  /* Hide floating elements on mobile */
+  .floating-cart-icon,
+  .floating-search-icon,
+  .floating-wishlist-icon {
+    display: none;
+  }
 
-.btn-out-line-brows {
-  border: 1px solid #333;
-  transition: var(--transition);
-  /* transform: translateY(0) */
-}
-.btn-shop-now {
-  transition: var(--transition);
-}
+  /* Mini product cards */
+  .mini-product-card {
+    width: 100px;
+    padding: 12px;
+  }
 
-.btn-shop-now:hover {
-  /* transition: var(--transition); */
-  transform: translateY(-10px);
-}
-.btn-out-line-brows:hover {
-  /* border: 1px solid #333; */
-  border: none;
-  color: #fff;
-  background-color: #333;
-  transform: translateY(-10px);
-}
+  .mini-product-image {
+    width: 60px;
+    height: 60px;
+  }
 
-.footer-left p {
-  color: #ffd8d8;
-}
-
-.footer-right ul li a {
-  color: #ccc;
-}
-
-.footer-right ul li:hover a {
-  color: #fff;
+  .mini-product-price {
+    font-size: 14px;
+  }
 }
