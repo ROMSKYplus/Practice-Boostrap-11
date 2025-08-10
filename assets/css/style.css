@@ -310,7 +310,7 @@ li.dropdown:hover ul.dropdown-menu {
 
 /* Hero Banner */
 .hero-banner {
-  background-image: url(/assets/img/background-banner.jpg);
+  background-image: url(/assets/img/bg.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -644,10 +644,18 @@ li.dropdown:hover ul.dropdown-menu {
 }
 
 /* Category Background Colors */
-.men-wear { background-color: #e6f4ff; }
-.kids-fashion { background-color: #fff4e6; }
-.beauty-products { background-color: #ffe6eb; }
-.accessories { background-color: #e6ffe8; }
+.men-wear {
+  background-color: #e6f4ff;
+}
+.kids-fashion {
+  background-color: #fff4e6;
+}
+.beauty-products {
+  background-color: #ffe6eb;
+}
+.accessories {
+  background-color: #e6ffe8;
+}
 
 /* ==========================================================================
    6. BEST SELLERS SECTION
@@ -797,7 +805,7 @@ li.dropdown:hover ul.dropdown-menu {
 }
 
 /* ==========================================================================
-   8. UTILITIES
+   8. General
    ========================================================================== */
 .text-decoration-none {
   text-decoration: none !important;
@@ -816,7 +824,8 @@ li.dropdown:hover ul.dropdown-menu {
    9. ANIMATIONS
    ========================================================================== */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
